@@ -1,0 +1,31 @@
+# Get rid of he start up license message
+#
+startup_message off
+
+# Set what displays in the status bar
+#
+caption always "%{yK} $LOGNAME@%H | %d.%m.%Y | %{yK}%c | %{yK}%-Lw%{yK}%50>%{Ky}%n%f*%t%{-}%+Lw%<%{- Wk} |"
+
+# use the same shell I came from
+#
+shell $SHELL
+
+# Turn on monitoring of other windows
+defmonitor on
+# When monitoring detects something display this message
+# % is replaced with the window number
+activity "% needs your attention"
+
+# Start with some default workspace tabs
+#
+screen -t vim 0
+screen -t git 1
+screen -t browse 2
+screen -t log 3
+
+# Make bold text bright colored
+attrcolor b ".I"
+
+# I don't know what these do yet
+#defbce "on"
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
